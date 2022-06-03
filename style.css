@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:wght@900&display=swap');
+
+:root {
+  --myGreen: rgb(10, 190, 31);
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 3em;
+  background-color: rgb(48, 12, 48);
+}
+
+h1 {
+  color: rgb(21, 219, 104)
+}
+
+.input-task {
+  display: flex;
+  margin-left: 4em;
+  gap: 1em;
+}
+
+.input-task input {
+  padding: 0.5em 10em;
+  outline: .5em outset rgb(0, 255, 42);
+}
+
+.input-task button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.6em;
+  cursor: pointer;
+  color: var(--myGreen);
+}
+
+.input-task button:hover{
+  color: chartreuse;
+ 
+}
+
+li{
+  color: white;
+}
+
+.tasks-list{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 1em;
+  border-radius: .8em;
+  /* padding: 2em; */
+}
+
+.task{
+  display: flex;
+  flex-flow: row wrap;
+  /* justify-content: space-between; */
+  /* background-color: cadetblue; */
+  background-color: rgb(173, 20, 220);
+  border-radius: .6em;
+  padding: .5em;
+}
+
+.task input{
+  padding: 0.5em 8em;
+  /* border-radius: 1em 0em 0em 1em; */
+  /* outline: 1px solid var(--myGreen); */
+}
+
+.task #edit-btn{
+  cursor: pointer;
+  background-color: rgb(40, 70, 204);
+  color: white;
+  padding: 0em 1.5em;
+  /* border: 1px solid blueviolet; */
+  border: none;
+  /* outline: 1px solid blueviolet; */
+}
+
+.task #edit-btn:hover{
+  background-color: rgb(0, 32, 175);
+}
+
+
+
+.task #delete-btn{
+  padding: 0em 1.2em;
+  cursor: pointer;
+  background-color: rgb(206, 1, 1);
+  color: white;
+  border: none;
+}
+
+.task #delete-btn:hover{
+  background-color: rgb(255, 0, 0);
+}
