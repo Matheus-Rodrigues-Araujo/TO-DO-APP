@@ -28,12 +28,16 @@ people to remain attentive and focused on their daily goals</p>
 
 <h2 align="center">Images</h2>
 
-![todo1](https://user-images.githubusercontent.com/68081476/172030076-b0079148-19c8-4f2c-ba1f-73fd9a7a2484.png)
+![todo1](https://user-images.githubusercontent.com/68081476/172070000-cc1e5800-7cd0-4e71-bb51-412830930ee5.png)
 
-![todo2](https://user-images.githubusercontent.com/68081476/172030082-09681c7e-c397-43b9-9b3b-d8264896db27.png)
+![todo2](https://user-images.githubusercontent.com/68081476/172070010-e89f1cab-9f14-45f9-aff5-dc4b53831b5e.png)
 
-![todo3](https://user-images.githubusercontent.com/68081476/172030209-41027025-abc9-4bae-9f25-4a9f53532d4d.png)
+![todo3](https://user-images.githubusercontent.com/68081476/172070051-dce76d05-7b55-4ad2-9e9e-37573e90594f.png)
 
-![todo5](https://user-images.githubusercontent.com/68081476/172030224-ca9e86e1-f053-4fee-a40b-17e49ab7622d.png)
 
-![todo4](https://user-images.githubusercontent.com/68081476/172030211-db6c6c62-502a-4814-b933-fc0d025f14b6.png)
+
+![todoblue](https://user-images.githubusercontent.com/68081476/172070022-bc9bc381-3ad1-46c7-bf9e-f3e528c4e8b2.png)
+
+![todoblue2](https://user-images.githubusercontent.com/68081476/172070026-b43ce158-fc0b-47d6-bcf5-da9420dceca7.png)
+
+![todoblue3](https://user-images.githubusercontent.com/68081476/172070031-9f3188dc-e8d3-4f90-b934-f84603c78891.png)
