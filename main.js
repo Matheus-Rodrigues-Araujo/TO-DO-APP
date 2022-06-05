@@ -1,8 +1,17 @@
 // Declaring the most important variables
 
+// Body
+const body = document.querySelector("body")
+
+// Inputs
 const inputEl = document.querySelector('#input-el')
+const switchInput = document.querySelector("#switch-input")
+
+// Save Button
 const saveButton = document.querySelector('#save-input')
+
 const item = document.getElementsByTagName('li')
+
 const ul = document.getElementById('ul')
 
 
@@ -14,7 +23,14 @@ inputEl.addEventListener('keydown', e => {
     addTask()
   }
 })
+// =============================================
 
+
+switchInput.addEventListener('click', () =>{
+  body.classList.toggle("change-bg")
+})
+
+// ==============================================
 saveButton.addEventListener('click', () => {
   // If the input.value.length is not null, the user can save the task by calling the add Task function
   if (inputEl.value.length) {
@@ -23,6 +39,7 @@ saveButton.addEventListener('click', () => {
   }
 })
 
+// ===============================================
 function addTask() {
   // Variable li is created
   const li = document.createElement('li')
@@ -35,6 +52,7 @@ function addTask() {
   // When the task is saved, the inputEl.value is deleted
   inputEl.value = ''
 }
+// ===============================================
 
 function createTask(element) {
   // INPUT
@@ -74,3 +92,4 @@ function createTask(element) {
   // Returns the elements that were created
   return element.append(taskInput, editBtn, deleteBtn)
 }
+// ===============================================
