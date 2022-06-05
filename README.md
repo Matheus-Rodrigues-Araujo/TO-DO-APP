@@ -26,6 +26,8 @@ people to remain attentive and focused on their daily goals</p>
 <p align="center">Press the delete button on the task you want to delete</p>
 <p align="center">Congratulations, your task is deleted!</p>
 
+<h3 align="center">Change the background color</h3>
+<p align="center">Press the switch on the right to change the background color</p>
 <h2 align="center">Images</h2>
 
 ![todo1](https://user-images.githubusercontent.com/68081476/172070000-cc1e5800-7cd0-4e71-bb51-412830930ee5.png)
