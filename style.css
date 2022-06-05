@@ -20,27 +20,156 @@ body{
   min-height: 100vh;
   /* background-color: rgb(43, 40, 40); */
   /* background-image: linear-gradient(to right, black, rgb(16, 24, 16)); */
-  background-image: linear-gradient(to left, rgb(190, 11, 11),
-   rgb(0, 18, 68));
+  background-image: linear-gradient(14deg, rgb(103, 11, 190),rgb(0, 0, 0));
   padding-bottom: 1em;
+  transition: .4s;
+  width: 100%;
+}
+/* INFO ============================================== */
+.info{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 
-h1{
-  color: greenyellow;
+.info h1{
+  text-align: center;
+  margin-left: 2em;
+  flex: 2;
 }
+
+
+/* .info label{
+  margin-left: auto;
+} */
+
+.parent-label{
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 1em;
+  gap: .5em;
+  align-items: center;
+  /* margin-bottom: 8em; */
+  color:rgb(0, 89, 255) ;
+  margin-right: 2em;
+}
+
+/* The label.switch element must be relative and have a defined width and height*/
+.switch {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  display: inline-block;
+}
+
+/* The "input:checkbox" will be important to monitor when the user checks the checkbox */
+.switch input{
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+/* The span element must be absolute and have top, left, right and bottom defined*/
+.switch span{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: blueviolet; */
+  background-color: rgb(37, 32, 37);
+  border-radius: 1em;
+  box-shadow: 0px 0px 10px rgb(15, 27, 87);
+}
+
+/* Here we create an element with the pseudo element called "before" */
+.switch span::before{
+  content: "";
+  background-color: rgb(255, 255, 255);
+  width: 20px;
+  height: 20px;
+  border-radius: 1em;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  transition: .4s;
+  /* transform: translateX(40px); */
+}
+
+/*What happens when the checkbox is selected*/
+.switch input:checked + span::before{
+  transform: translateX(28px);
+  background-color: rgb(255, 255, 255);
+  transition: .4s;
+}
+
+.switch input:checked + span{
+  background-color: rgb(89, 6, 167);
+  transition: .4s;
+  box-shadow: 0px 0px 5px rgb(168, 159, 159);
+}
+
+/* This class will be added or removed by the toggle method */
+.change-bg{
+  background-image: linear-gradient(14deg, rgb(0, 74, 235),rgb(0, 0, 0));
+  transition: .6s;
+}
+
+.change-bg > label{
+  color: rgb(19, 250, 19);
+}
+
+.change-bg .tasks-list{
+  display: flex;
+  flex-flow: column wrap;
+  background-color: rgb(10, 136, 153);
+  gap: 1em;
+  border: 8px outset rgb(15, 15, 15);
+  border-radius: .5em;
+  padding: 1em;
+}
+
+.change-bg .data-input > button{
+  background-color: rgb(10, 136, 153);
+}
+
+.change-bg svg{
+  background-color: rgb(10, 136, 153);
+}
+/* ===================================================== */
+
+h1{
+  color: rgb(241, 241, 241);
+  margin-left: auto;
+}
+
 
 input{
   padding: .5em 5em;
 }
 
 .data-input > button{
-  background-color: transparent;
+  background-color: rgb(0, 0, 0);
   border: none;
-  color: greenyellow;
+  outline: rgb(0, 0, 0);
+  /* color: rgb(80, 133, 2); */
   /* padding: .5em 1em; */
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   cursor: pointer;
+  padding: .1em;
   font-weight: 700;
+}
+
+svg{
+  width: 35px;
+  height: auto;
+  height: fit-content;
+  background-color: rgb(0, 0, 0);
+  fill: wheat;
+  transition: .4s;
 }
 
 .data-input > button:hover{
@@ -50,7 +179,7 @@ input{
 
 .data-input{
   display: flex;
-  gap: .5em;
+  gap: 0;
   flex-flow: row wrap;
 }
 
@@ -61,9 +190,9 @@ input{
 .tasks-list{
   display: flex;
   flex-flow: column wrap;
-  background-color: chartreuse;
+  background-color: rgb(11, 17, 5);
   gap: 1em;
-  border: 5px outset rgb(255, 75, 4);
+  border: 8px outset rgb(168, 11, 58);
   border-radius: .5em;
   padding: 1em;
 }
@@ -100,11 +229,27 @@ input{
 
 
 @media screen and (min-width: 345px) and (max-width: 470px){
+  
   input{
-    padding: .5em 3em;
+    padding: .4em 2em;
   }
+
+  .switch{
+    width: 50px;
+  }
+
+  .span::before{
+    width: 10px;
+    height: 10px;
+    left: 2px;
+  }
+
+  .switch input:checked + span::before{
+    transform: translateX(16px);
+  }
+
   .tasks-list{
-    padding: 1em;
+    padding: .5em;
     margin-left: auto;
     margin-right: auto;
   }
