@@ -30,16 +30,17 @@ people to remain attentive and focused on their daily goals</p>
 <p align="center">Press the switch on the right to change the background color</p>
 <h2 align="center">Images</h2>
 
-![todo1](https://user-images.githubusercontent.com/68081476/172070000-cc1e5800-7cd0-4e71-bb51-412830930ee5.png)
+<div style="display: inline-block">
+  <img align="center" src="https://user-images.githubusercontent.com/68081476/172070000-cc1e5800-7cd0-4e71-bb51-412830930ee5.png">
 
-![todo2](https://user-images.githubusercontent.com/68081476/172070010-e89f1cab-9f14-45f9-aff5-dc4b53831b5e.png)
+  <img align="center" src="https://user-images.githubusercontent.com/68081476/172070010-e89f1cab-9f14-45f9-aff5-dc4b53831b5e.png">
+  
+  <img align="center" src="https://user-images.githubusercontent.com/68081476/172070051-dce76d05-7b55-4ad2-9e9e-37573e90594f.png">
+  
+  <img align="center" src="https://user-images.githubusercontent.com/68081476/172070022-bc9bc381-3ad1-46c7-bf9e-f3e528c4e8b2.png">
+    
+  <img align="center" src="https://user-images.githubusercontent.com/68081476/172070026-b43ce158-fc0b-47d6-bcf5-da9420dceca7.png">
+  
+  <img align="center" src="https://user-images.githubusercontent.com/68081476/172070031-9f3188dc-e8d3-4f90-b934-f84603c78891.png">
 
-![todo3](https://user-images.githubusercontent.com/68081476/172070051-dce76d05-7b55-4ad2-9e9e-37573e90594f.png)
-
-
-
-![todoblue](https://user-images.githubusercontent.com/68081476/172070022-bc9bc381-3ad1-46c7-bf9e-f3e528c4e8b2.png)
-
-![todoblue2](https://user-images.githubusercontent.com/68081476/172070026-b43ce158-fc0b-47d6-bcf5-da9420dceca7.png)
-
-![todoblue3](https://user-images.githubusercontent.com/68081476/172070031-9f3188dc-e8d3-4f90-b934-f84603c78891.png)
+</div>
