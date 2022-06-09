@@ -1,95 +1,93 @@
-// Declaring the most important variables
+const tasks = JSON.parse(localStorage.getItem('list_tarefas')) || []
 
-// Body
-const body = document.querySelector("body")
+const body = document.querySelector('body')
 
 // Inputs
 const inputEl = document.querySelector('#input-el')
-const switchInput = document.querySelector("#switch-input")
+const switchInput = document.querySelector('#switch-input')
 
 // Save Button
 const saveButton = document.querySelector('#save-input')
-
 const item = document.getElementsByTagName('li')
-
 const ul = document.getElementById('ul')
 
+function showTasks() {
+  ul.classList.add('tasks-list')
+  ul.innerHTML = ''
 
-// Adding a Event Listerner method toi the saveButton
+  for (let item of tasks) {
+    // Li
+    const taskIndex = tasks.indexOf(item)
+    const li = document.createElement('li')
+
+    const taskInput = document.createElement('input')
+    taskInput.value = item
+    taskInput.setAttribute('disabled', '')
+    taskInput.classList.toggle('input-disabled')
+
+    const editBtn = document.createElement('button')
+    editBtn.classList.add('edit-style')
+    editBtn.textContent = 'EDIT'
+
+    editBtn.addEventListener('click', () => {
+      taskInput.classList.toggle('input-disabled')
+      taskInput.toggleAttribute('disabled')
+    })
+
+    // DELETE BUTTON
+    const deleteBtn = document.createElement('button')
+    deleteBtn.classList.add('delete-style')
+    deleteBtn.textContent = 'DELETE'
+
+    // deleteBtn EventListener
+    deleteBtn.addEventListener('click', () => {
+      tasks.splice(taskIndex, 1)
+      li.remove()
+      saveLocalStorage()
+      checkTasks()
+    })
+    li.append(taskInput, editBtn, deleteBtn)
+    ul.appendChild(li)
+  }
+}
+
+showTasks()
+
+// Adding a Event Listerner method to the saveButton
 inputEl.addEventListener('keydown', e => {
-  // ul.classList.add('tasks-list')
   if (e.code === 'Enter' && inputEl.value.length) {
-    ul.classList.add('tasks-list')
+    // ul.classList.add('tasks-list')
     addTask()
   }
 })
-// =============================================
 
-
-switchInput.addEventListener('click', () =>{
-  body.classList.toggle("change-bg")
+switchInput.addEventListener('click', () => {
+  body.classList.toggle('change-bg')
 })
 
-// ==============================================
 saveButton.addEventListener('click', () => {
   // If the input.value.length is not null, the user can save the task by calling the add Task function
   if (inputEl.value.length) {
-    ul.classList.add('tasks-list')
     addTask()
   }
 })
 
-// ===============================================
 function addTask() {
-  // Variable li is created
-  const li = document.createElement('li')
-  // The variable 'li' is passed as an argument to the createTask function
-  createTask(li)
-
-  // ul append what was built by the createTask function
-  ul.append(li)
-
-  // When the task is saved, the inputEl.value is deleted
+  const task = inputEl.value
+  tasks.push(task)
   inputEl.value = ''
+  showTasks()
+  saveLocalStorage()
 }
-// ===============================================
 
-function createTask(element) {
-  // INPUT
-  // Creating an input element and setting the input.value to input.value and providing the disabled attribute
-  const taskInput = document.createElement('input')
-  taskInput.value = inputEl.value
-  taskInput.setAttribute('disabled', '')
-  taskInput.classList.toggle('input-disabled')
-
-  // EDIT BUTTON
-  // Creating the edit button and adding a classlist to it
-  // and a textContent
-  const editBtn = document.createElement('button')
-  editBtn.classList.add('edit-style')
-  editBtn.textContent = 'EDIT'
-  // editBtn EventListener
-  editBtn.addEventListener('click', () => {
-    taskInput.classList.toggle('input-disabled')
-    taskInput.toggleAttribute('disabled')
-  })
-
-  // DELETE BUTTON
-  // Creating the delete button and adding a classlist to it
-  // and a textContent
-  const deleteBtn = document.createElement('button')
-  deleteBtn.classList.add('delete-style')
-  deleteBtn.textContent = 'DELETE'
-
-  // deleteBtn EventListener
-  deleteBtn.addEventListener('click', () => {
-    element.remove()
-    //If the ul has no children, the class 'tasks-list' will be removed
-    if(!ul.childElementCount){
-      ul.classList.remove('tasks-list')
-    }
-  })
-  // Returns the elements that were created
-  return element.append(taskInput, editBtn, deleteBtn)
+function saveLocalStorage() {
+  localStorage.setItem('list_tarefas', JSON.stringify(tasks))
 }
-// ===============================================
+
+// Function to 
+function checkTasks(){
+  if(!ul.innerHTML){
+    ul.classList.remove('tasks-list')
+  }
+}
+checkTasks()
