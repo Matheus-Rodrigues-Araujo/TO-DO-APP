@@ -224,6 +224,16 @@ svg {
   background-color: rgb(255, 0, 0);
 }
 
+
+li button{
+  padding: .5em;
+}
+li svg{
+  width: 11px;
+  /* height: 10px; */
+  fill: white;
+}
+
 @media screen and (min-width: 345px) and (max-width: 470px) {
   input {
     padding: 0.4em 2em;
