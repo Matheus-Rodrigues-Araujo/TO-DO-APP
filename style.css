@@ -26,6 +26,9 @@ body {
   width: 100%;
 }
 /* INFO ============================================== */
+
+
+
 .info {
   display: flex;
   flex-flow: row wrap;
@@ -149,6 +152,7 @@ input {
   padding: 0.5em 5em;
 }
 
+
 .data-input > button {
   background-color: rgb(0, 0, 0);
   border: none;
@@ -235,6 +239,7 @@ li svg{
 }
 
 @media screen and (min-width: 345px) and (max-width: 470px) {
+
   input {
     padding: 0.4em 2em;
   }
@@ -268,15 +273,21 @@ li svg{
   }
 }
 
-@media screen and (min-width: 250px) and (max-width: 344px) {
+@media screen and (min-width: 230px) and (max-width: 344px) {
   body {
-    padding: 1em;
+    padding: .8em;
   }
 
-  /* input{
-    padding: .3em;
-  } */
+  .info{
+    flex-flow: row wrap;
+    align-items: center;
+  }
 
+  h1{
+    font-size: 1em;
+  }
+
+  
   .data-input {
     flex-flow: column wrap;
     gap: 0;
@@ -288,7 +299,7 @@ li svg{
 
   .data-input button {
     flex: 1;
-    background-color: rgb(20, 19, 19);
+    /* background-color: rgb(20, 19, 19); */
   }
 
   .tasks-list {
