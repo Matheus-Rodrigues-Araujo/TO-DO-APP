@@ -1,7 +1,7 @@
 <h1 align="center">TO DO APP</h1>
 
 <p align="center">A simple app that can help you to get organized and not forget your tasks for the day</p>
-<p align="center">Try the project on codepen: https://codepen.io/Matheus-Rodrigues-Araujo/full/mdXjEvx</p>
+<p align="center">Try the project on codepen:https://cdpn.io/pen/debug/mdXjEvx?authentication_hash=LQMExNNDqamk</p>
 <h2 align="center">About</h2>
 
 <p>This project was created using html, css and javascript with the purpose of helping 
